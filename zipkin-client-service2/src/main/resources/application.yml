@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: service2
+  zipkin:
+    base-url: http://localhost:8080
+
+server:
+  port: 8082
+
+---
+
+spring:
+  profiles: docker
+  zipkin:
+    base-url: http://zipkin-server:8080
+
+server:
+  port: 8080
